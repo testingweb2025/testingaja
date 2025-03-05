@@ -1,0 +1,1127 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+/* Info Bar */
+.info-bar {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Jarak teks dari kiri */
+.info-text {
+    margin-left: 20px;
+}
+
+/* Jarak WhatsApp dari kanan */
+.whatsapp-link {
+    text-decoration: none;
+    color: #25D366;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Hover efek */
+.whatsapp-link:hover {
+    text-decoration: underline;
+    color: #1EBE56;
+}
+
+/* RESPONSIVE UNTUK LAYAR HP */
+@media (max-width: 768px) {
+    .info-bar {
+        flex-direction: column; /* Tumpuk elemen ke bawah */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .info-text {
+        margin-left: 0;
+        margin-bottom: 1px; /* Beri jarak antara teks dan WhatsApp */
+    }
+
+    .whatsapp-link {
+        margin-right: 0; /* Hilangkan margin kanan */
+    }
+}
+
+
+h1 {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.links {
+    font-size: 14px;
+    color: gray;
+}
+
+.links a {
+    color: gray;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* CAROUSEL FOTO */
+.image-slider {
+    width: 90%;
+    margin: auto;
+}
+
+.image-slider .slick-slide {
+    margin: 0 5px; /* Mengurangi jarak antar foto */
+}
+
+.image-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Tombol navigasi carousel */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slick-prev {
+    left: -30px;
+}
+
+.slick-next {
+    right: -30px;
+}
+
+/* BAGIAN BETAWI SLIDER */
+.betawi-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.betawi-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.betawi-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* Gambar Statis (Baris Atas) */
+.jawa-static {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.jawa-static img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Slideshow (Baris Bawah) */
+.jawa-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.jawa-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.jawa-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Tombol Navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slick-prev {
+    left: -10px;
+}
+
+.slick-next {
+    right: -10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow */
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .jawa-static {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jawa-static img {
+        width: 90%;
+    }
+
+    .jawa-slider {
+        width: 100%;
+    }
+
+    .slick-prev, .slick-next {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.bali-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.bali-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.bali-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.banjar-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.banjar-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.banjar-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.paesageng-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.paesageng-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.paesageng-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.minang-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.minang-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.minang-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+ /* Slideshow Container */
+ .jogja-slider {
+    width: 90%;
+    max-width: 400px; /* Batasi ukuran gambar */
+    margin: auto;
+    position: relative;
+}
+
+.jogja-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Tombol Navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slick-prev {
+    left: -10px;
+}
+
+.slick-next {
+    right: -10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow */
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+    .jogja-slider {
+        width: 100%;
+        max-width: 300px; /* Lebih kecil di HP */
+    }
+    .slick-prev, .slick-next {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+}
+
+ /* Slideshow Container */
+ .preweding-slider {
+    width: 90%;
+    max-width: 400px; /* Batasi ukuran gambar */
+    margin: auto;
+    position: relative;
+}
+
+.preweding-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Tombol Navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slick-prev {
+    left: -10px;
+}
+
+.slick-next {
+    right: -10px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow */
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+    .preweding-slider {
+        width: 100%;
+        max-width: 300px; /* Lebih kecil di HP */
+    }
+    .slick-prev, .slick-next {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.paesagengjangan-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.paesagengjangan-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.paesagengjangan-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.soloputri-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.soloputri-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.soloputri-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.modern2-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.modern2-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.modern2-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* BAGIAN BETAWI SLIDER */
+.sundasiger-slider {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.sundasiger-slider .slick-slide {
+    margin: 0 10px;
+}
+
+.sundasiger-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Styling tombol navigasi */
+.slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Pastikan tombol berada di atas elemen lain */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Posisi tombol panah */
+.slick-prev {
+    left: 10px; /* Pastikan tombol berada di dalam area slider */
+}
+
+.slick-next {
+    right: 10px;
+}
+
+/* Pastikan tombol panah terlihat */
+.slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sembunyikan default arrow dari Slick */
+.slick-prev:before,
+.slick-next:before {
+    display: none;
+}
+
+/* Untuk layar kecil, atur posisi tombol lebih dekat */
+@media (max-width: 768px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+}
+
+/* BAGIAN FOTO PROMO */
+.promo-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Mengatur jarak antar gambar */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.promo-item {
+    flex: 1 1 calc(50% - 10px); /* Agar dua kolom dengan jarak antar gambar */
+    max-width: calc(50% - 10px);
+    text-align: center;
+}
+
+.promo-item img {
+    width: 100%;
+    height: auto;
+    max-height: 800px; /* Menyamakan tinggi gambar agar lebih seragam */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Ukuran di HP */
+@media (max-width: 768px) {
+    .promo-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .image-slider .slick-slide {
+        margin: 0 5px;
+    }
+
+    .image-slider img {
+        width: 100%;
+    }
+
+    .slick-prev, .slick-next {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+/* TOMBOL WHATSAPP */
+.whatsapp-button {
+    margin-top: 20px;
+}
+
+.whatsapp-button a {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-button a:hover {
+    background-color: #1ebe5d;
+}
+/* Deskripsi 1 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.wedding-image {
+    width: 50%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.description {
+    width: 45%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #d9534f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #c9302c;
+}
+
+/* ✅ Responsive untuk HP */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wedding-image {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .description {
+        width: 90%;
+        text-align: center;
+    }
+}
+/* Deskripsi 2 */
+.why-us {
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Pastikan box bisa turun ke bawah jika konten panjang */
+}
+
+.box {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: auto; /* Pastikan tinggi menyesuaikan konten */
+}
+
+.box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+.box p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    white-space: normal; /* Pastikan teks bisa wrap */
+    overflow: visible !important; /* Hindari pemotongan teks */
+    text-overflow: unset !important; /* Tidak menampilkan ellipsis */
+    display: block; /* Pastikan teks tampil sepenuhnya */
+    height: auto !important; /* Pastikan tidak ada batasan tinggi */
+    max-height: none !important; /* Menghapus batasan tinggi */
+}
